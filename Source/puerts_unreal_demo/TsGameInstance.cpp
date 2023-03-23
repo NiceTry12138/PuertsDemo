@@ -14,7 +14,7 @@ void UTsGameInstance::OnStart()
     //GameScript->WaitDebugger();
     TArray<TPair<FString, UObject*>> Arguments;
     Arguments.Add(TPair<FString, UObject*>(TEXT("GameInstance"), this));
-    GameScript->Start("QuickStart", Arguments);
+    GameScript->Start("UsingWidget", Arguments);
 }
 
 void UTsGameInstance::Shutdown()
