@@ -507,6 +507,14 @@ FJsEnvImpl::FJsEnvImpl(std::shared_ptr<IJSModuleLoader> InModuleLoader, std::sha
 
     MethodBindingHelper<&FJsEnvImpl::NewContainer>::Bind(Isolate, Context, Global, "__tgjsNewContainer", This);
 
+	MethodBindingHelper<&FJsEnvImpl::TArrayToJsArray>::Bind(Isolate, Context, Global, "__tgjsTArrayToJsArray", This);
+
+	MethodBindingHelper<&FJsEnvImpl::TMapToJsMap>::Bind(Isolate, Context, Global, "__tgjsTMapToJsMap", This);
+
+	MethodBindingHelper<&FJsEnvImpl::JsArrayToTArray>::Bind(Isolate, Context, Global, "__tgjsJsArrayToTArray", This);
+
+	MethodBindingHelper<&FJsEnvImpl::JsMapToTMap>::Bind(Isolate, Context, Global, "__tgjsJsMapToTMap", This);
+
     MethodBindingHelper<&FJsEnvImpl::MergeObject>::Bind(Isolate, Context, Global, "__tgjsMergeObject", This);
 
     MethodBindingHelper<&FJsEnvImpl::NewObjectByClass>::Bind(Isolate, Context, Global, "__tgjsNewObject", This);
